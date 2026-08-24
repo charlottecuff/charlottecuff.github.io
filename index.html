@@ -108,6 +108,14 @@
     font-size: 1.1rem;
     margin-bottom: 2rem;
   }
+  .hero-langs { margin-bottom: 2rem; }
+  .hero-os { margin-bottom: 1.25rem; }
+  .hero-os .tag {
+    background: var(--accent);
+    color: #04120a;
+    font-weight: 700;
+    border-color: var(--accent);
+  }
   .btn-row { display: flex; gap: 1rem; flex-wrap: wrap; }
   .btn {
     display: inline-block;
@@ -258,16 +266,30 @@
 </header>
 
 <section class="hero" id="top">
-  <div class="eyebrow">$ whoami</div>
+  <div class="tags hero-os"><span class="tag">Linux</span></div>
+  <div class="eyebrow"></div>
   <div class="name-row">
     <img class="headshot" src="headshot.jpg" alt="Charlotte Cuff">
-    <h1>Charlotte Cuff — Cyber Security &amp; Secure Software Development</h1>
+    <h1>Charlotte Cuff </h1>
+     <p> BSc in Mathematics and Computer Science, building towards a career in cybersecurity</p>
   </div>
   <p>
-    Recent graduate building practical, security-first software. This site collects the
-    projects from my degree that best show how I think about threats, defence, and writing
-    code that holds up under pressure.
+     I am a recent graduate dedicated to developing robust, 
+     security-driven software solutions. 
+     This portfolio showcases selected academic and personal projects that reflect my approach to identifying threats, 
+     defending against vulnerabilities, and engineering resilient code under real-world conditions.
   </p>
+  <div class="tags hero-langs">
+    <span class="tag">Python</span>
+    <span class="tag">C</span>
+    <span class="tag">C++</span>
+    <span class="tag">Swift</span>
+    <span class="tag">R</span>
+    <span class="tag">Java</span>
+    <span class="tag">JavaScript</span>
+    <span class="tag">Bash</span>
+    <span class="tag">SQL</span>
+  </div>
   <div class="btn-row">
     <a class="btn btn-solid" href="#projects">View Projects</a>
     <a class="btn btn-outline" href="https://github.com/charlottecuff" target="_blank" rel="noopener">GitHub Profile</a>
@@ -387,10 +409,11 @@
     <div class="skill-group">
       <h4>Tools</h4>
       <ul>
+        <li>Linux (CLI &amp; administration)</li>
         <li>Wireshark</li>
         <li>Burp Suite</li>
         <li>Nmap</li>
-        <li>Git / Linux</li>
+        <li>Git</li>
       </ul>
     </div>
     <div class="skill-group">
