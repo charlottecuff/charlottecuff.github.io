@@ -201,6 +201,26 @@
     font-size: 0.85rem;
   }
 
+  .current-project-card { max-width: 700px; }
+  .current-project-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--mono);
+    font-size: 0.78rem;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 0.75rem;
+  }
+  .current-project-status .status-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 0 3px rgba(79, 209, 197, 0.15);
+  }
+
   .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -277,6 +297,7 @@
   </div>
   <h2> BSc in Mathematics and Computer Science, building towards a career in cybersecurity</h2>
   <p>
+    My work combines software engineering, machine learning and security principles to build systems that are both intelligent and resilient. I am particularly interested in application security, cloud security and protecting sensitive data within critical sectors such as healthcare.
      I am a recent graduate dedicated to developing robust, 
      security-driven software solutions. 
      This portfolio showcases selected academic and personal projects that reflect my approach to identifying threats, 
@@ -300,15 +321,25 @@
 </section>
 
 <section id="about">
-  <h2 class="section-title">about</h2>
-  <p class="section-sub">A short introduction — replace with your own background.</p>
+  <h2 class="section-title">about me</h2>
   <div class="about-grid">
     <p>
-      I'm a recent graduate with a degree in [Your Degree, e.g. Computer Science / Cyber Security],
-      focused on secure software development, offensive and defensive security, and building
-      systems that are resilient by design. The projects below were built during my studies and
-      personal research, covering areas like network security, application security, and
-      penetration testing.
+     I'm a Mathematics and Computer Science graduate with a strong focus on secure software engineering and applied machine learning. 
+     My dissertation, MedMonitor Intelligence, centered on building an iOS app for cardiovascular risk prediction, 
+     where security and privacy were foundational. I implemented encrypted local storage, biometric authentication, 
+     and privacy-by-design strategies to protect sensitive health data and ensure full compliance with UK GDPR.
+    </p>
+    <p>
+    My interest in cybersecurity was sparked while developing MedMonitor Intelligence. 
+    Working with realistic healthcare data made me realise what’s truly at stake: as medical records move online, 
+    the risk to patient privacy grows, and those most affected are the people whose data we protect. 
+    This shifted my mindset—security measures like encryption, credential hashing, and biometric access weren't afterthoughts,
+     but core design decisions from the very beginning. </p>
+    <p>
+     I'm now committed to advancing a career in cybersecurity, 
+     with a particular passion for secure application development, cloud security, and leveraging data science to strengthen threat detection. 
+     Above all, I want to help defend the critical systems people rely on—especially in healthcare, where the consequences of a breach are measured not just in downtime, 
+     but in patient trust and safety.This portfolio brings together the projects I've built so far and those I continue to develop as I grow in this field.
     </p>
     <p>
       I'm currently looking for opportunities in cyber security where I can apply what I've
@@ -318,20 +349,59 @@
   </div>
 </section>
 
+<section id="current-project">
+  <h2 class="section-title">currently building</h2>
+  <p class="section-sub">What I'm working on right now, building directly on my cloud computing module.</p>
+
+  <div class="card current-project-card">
+    <div class="current-project-status"><span class="status-dot"></span> In progress</div>
+    <h3>Cloud Misconfiguration Detector</h3>
+    <p class="desc">
+      A Cloud Security Posture Management tool for AWS. I'm using Terraform to deploy a small set of
+      cloud resources — a storage bucket, an IAM role, and a VM — deliberately configured with common
+      real-world misconfigurations: a public bucket, an over-permissive IAM policy, unencrypted storage,
+      and an open security group.
+    </p>
+    <p class="desc">
+      I'm scanning the Terraform configuration with Checkov to catch and document each issue, and writing
+      my own Python script to parse the configs and flag the same misconfigurations independently —
+      applying the same algorithmic, data-driven approach from my MedMonitor risk-prediction work to
+      cloud risk detection.
+    </p>
+    <div class="tags">
+      <span class="tag">Terraform</span>
+      <span class="tag">AWS</span>
+      <span class="tag">Checkov</span>
+      <span class="tag">Python</span>
+      <span class="tag">IAM</span>
+    </div>
+    <div class="card-links">
+      <a href="https://github.com/charlottecuff" target="_blank" rel="noopener">GitHub →</a>
+    </div>
+  </div>
+</section>
+
 <section id="projects">
   <h2 class="section-title">projects</h2>
-  <p class="section-sub">Selected work from my degree and personal projects. Replace these cards with your own repositories.</p>
+  <p class="section-sub">Selected work from my degree and personal projects that demonstrate my skills in cyber security and software development.</p>
 
   <div class="grid">
     <div class="card">
-      <h3>Project Name One</h3>
+      <h3>MedMonitor Intelligence</h3>
       <p class="desc">
-        One or two sentences describing the project — what problem it solves, what you built,
-        and the outcome or key learning.
+          MedMonitor Intelligence, an iOS app for advanced cardiovascular risk assessment, 
+          leveraging on-device machine learning (LightGBM via Core ML) and SHAP-driven explainability. 
+          Security and privacy were integral from inception: health data is encrypted at rest using Core Data encryption, 
+          credentials are hashed with CryptoKit, access is protected by biometric authentication, 
+          and strict session timeouts are enforced. Every safeguard aligns with UK GDPR standards for handling sensitive health data, 
+          setting a benchmark for privacy-by-design in mobile health technology.
       </p>
       <div class="tags">
         <span class="tag">Python</span>
-        <span class="tag">Network Security</span>
+        <span class="tag">Swift</span>
+       <span class="tag">Core ML</span>
+        <span class="tag">CryptoKit</span>
+        <span class="tag">Data Privacy</span>
       </div>
       <div class="card-links">
         <a href="#" target="_blank" rel="noopener">GitHub →</a>
